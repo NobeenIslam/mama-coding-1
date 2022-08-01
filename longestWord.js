@@ -28,19 +28,36 @@ return number
 function getLengthOfLongestWord(string){
     const wordLengths = []
     const words = string.split(" ")
-
+    //["Hello","mama"]
     for (const word of words){
         wordLengths.push(word.length)
     }
-    
+    //[5,4]
     const longestWordLength = Math.max(...wordLengths)
+
     return longestWordLength
 }
 
-console.log(getLengthOfLongestWord("Hello mama"),"should be", 5)
-console.log(getLengthOfLongestWord("The fox went to the shops"),"should be", 5)
-console.log(getLengthOfLongestWord("aaa bbbb ccc"),"should be", 4)
+function getLengthOfLongestWordMap(string){
+    const words = string.split(" ")
+    //["hello","mama"]
+    const wordLengths = words.map(word=>{
+        console.log(`This is ${word} being mapped`)
+        return word.length
+    })
+    console.log(wordLengths)
+    const longestWordLength = Math.max(...wordLengths)
+    
+    return longestWordLength
+}
 
+// console.log(getLengthOfLongestWord("Hello mama"),"should be", 5)
+// console.log(getLengthOfLongestWord("The fox went to the shops"),"should be", 5)
+// console.log(getLengthOfLongestWord("aaa bbbb ccc"),"should be", 4)
+
+console.log(getLengthOfLongestWordMap("Hello mama"),"should be", 5)
+//console.log(getLengthOfLongestWordMap("The fox went to the shops"),"should be", 5)
+//console.log(getLengthOfLongestWordMap("aaa bbbb ccc"),"should be", 4)
 
 /* Notes
 Go through spread operator
