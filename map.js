@@ -4,7 +4,9 @@ function multiplyByFive(number){
     return number*5
 }
 
-const multiplyBySix = (number)=>{
+const six ="six";
+
+const multiplyBySix = number=>{
     return number*6
 }
 const multiplyBySeven = number=> number*7

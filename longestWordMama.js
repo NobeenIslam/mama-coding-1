@@ -26,3 +26,11 @@ function longestWord(str){
 
 console.log(longestWord("nobeen and me "))
 
+function longestWordWithMap(str){
+    const allWords=str.split(" ");
+   
+    const wordsLength=allWords.map(word=>word.length)
+    const lengthOfLongestWord=Math.max(...wordsLength);
+    return lengthOfLongestWord;
+}
+console.log(longestWordWithMap("nobeen and me coding kingkortobbobimoru"))
