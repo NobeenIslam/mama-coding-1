@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 /* [12,18,31,19]
 
 function findBiggestNumber
@@ -28,27 +28,24 @@ return BIGGEST_NUMBER_SO_FAR
 
 */
 
-function findBiggestNumber(listOfNumbers){
-    let biggestNumberSoFar = listOfNumbers[0]
+function findBiggestNumber(listOfNumbers) {
+  let biggestNumberSoFar = listOfNumbers[0];
 
-    for(const number of listOfNumbers){
-        console.log(number, typeof number)
-        if(typeof number === "string"){
-            console.log("This is a string, please ignore")
-            break
-        }else if(number>biggestNumberSoFar){
-            biggestNumberSoFar = number
-            console.log("New biggest number is", biggestNumberSoFar)
-        }
+  for (const number of listOfNumbers) {
+    console.log(number, typeof number);
+    if (typeof number === "string") {
+      console.log("This is a string, please ignore");
+      break;
+    } else if (number > biggestNumberSoFar) {
+      biggestNumberSoFar = number;
+      console.log("New biggest number is", biggestNumberSoFar);
     }
+  }
 
-    return biggestNumberSoFar
+  return biggestNumberSoFar;
 }
 
 // console.log(findBiggestNumber([1,4,3,6,7]),"should be",7)
 // console.log(findBiggestNumber([5.5,13,25,-5]),"should be",25)
-console.log(findBiggestNumber([1,13,"25",-5]),"should be",13)
+console.log(findBiggestNumber([1, 13, "25", -5]), "should be", 13);
 // console.log(findBiggestNumber([0,0,0,0]),"should be",0)
-
-
-

@@ -14,23 +14,23 @@ function longestWord(STR)
 return  LENGTH_OF_LONGEST_WORD
 */
 
-function longestWord(str){
-    const allWords=str.split(" ");
-    const wordsLength=[];
-    for(const word of allWords){
-        wordsLength.push(word.length);
-}
-    const lengthOfLongestWord=Math.max(...wordsLength);
-    return lengthOfLongestWord;
+function longestWord(str) {
+  const allWords = str.split(" ");
+  const wordsLength = [];
+  for (const word of allWords) {
+    wordsLength.push(word.length);
+  }
+  const lengthOfLongestWord = Math.max(...wordsLength);
+  return lengthOfLongestWord;
 }
 
-console.log(longestWord("nobeen and me "))
+console.log(longestWord("nobeen and me "));
 
-function longestWordWithMap(str){
-    const allWords=str.split(" ");
-   
-    const wordsLength=allWords.map(word=>word.length)
-    const lengthOfLongestWord=Math.max(...wordsLength);
-    return lengthOfLongestWord;
+function longestWordWithMap(str) {
+  const allWords = str.split(" ");
+
+  const wordsLength = allWords.map((word) => word.length);
+  const lengthOfLongestWord = Math.max(...wordsLength);
+  return lengthOfLongestWord;
 }
-console.log(longestWordWithMap("nobeen and me coding kingkortobbobimoru"))
+console.log(longestWordWithMap("nobeen and me coding kingkortobbobimoru"));
