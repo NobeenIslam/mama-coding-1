@@ -21,6 +21,5 @@ const blueBird: schoolType = {
 };
 
 const { numberOfPeople, address } = school;
-
 console.log(numberOfPeople, address);
 console.log(school);
